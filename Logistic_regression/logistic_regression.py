@@ -39,7 +39,7 @@ def gradientDescentStep(X, y, W, b, learn_rate = 0.01):
     W[1] += sum(derivErrors[1])*learn_rate
     b += sum(derivErrors[2])*learn_rate
     e = error(y, y_hat)
-    return W, b, sum(e)
+    return W, b, e
     
 
 # This function runs the perceptron algorithm repeatedly on the dataset,
