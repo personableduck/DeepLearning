@@ -34,6 +34,7 @@ def dErrors(X, y, y_hat):
 # The error e will be calculated and returned for you, for plotting purposes.
 def gradientDescentStep(X, y, W, b, learn_rate = 0.01):
     y_hat = prediction(X,W,b)
+    errors = error_vector(y, y_hat)
     derivErrors = dErrors(X, y, y_hat)
     W[0] += sum(derivErrors[0])*learn_rate
     W[1] += sum(derivErrors[1])*learn_rate
